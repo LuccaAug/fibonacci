@@ -1,0 +1,15 @@
+name: Super Calculator Actions
+run-name: Super Calculator Actions
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.10.7
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10.7
+      - name: Run the tests
+        run: |
+          python -m unittest discover
